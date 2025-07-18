@@ -1,0 +1,2 @@
+How does the JavaScript call stack work? --
+Each function call is represented as a frame on the call stack

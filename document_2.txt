@@ -1,0 +1,15 @@
+what is debounce? --
+debouncing is a technique used to ensure that a function is not called too frequently. It is commonly used in scenarios where events are triggered rapidly, such as typing in an input field or resizing a window. Without debouncing, functions might be executed many times in quick succession, causing performance issues or unwanted behaviour.
+
+
+What’s throttle? -- 
+Throttling is a technique used to limit the number of times a function can be executed in a given time frame.
+
+
+Where are they useful? (e.g., search bars, scroll handlers) -- 
+Throttling and Debouncing is involved where high-frequency events are triggered, such as resize, scroll, input, etc. The core idea of debounce and throttle is to add a control layer between events and functions to delay execution
+
+
+
+What is a closure in JS, and why is it powerful? -- 
+JavaScript closures are a powerful yet sometimes misunderstood concept in JavaScript programming. A closure is created when a function is defined within another function. Despite being tricky to understand at first, closures are powerful and essential for writing clean, modular and efficient code.
