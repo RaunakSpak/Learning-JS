@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Debounce & Throttle Playground</title>
+  <style>
+    body { font-family: sans-serif; padding: 2rem; }
+    input { font-size: 1.2rem; padding: 0.5rem; width: 300px; }
+    .output { margin-top: 1rem; font-size: 1.5rem; color: #333; }
+  </style>
+</head>
+<body>
+
+  <h2>🛠️ Debounce & Throttle Playground</h2>
+  <input type="text" id="input" placeholder="Type something..." />
+  <div class="output">Live Value: <span id="liveOutput"></span></div>
+
+  <script>
+    const input = document.getElementById('input');
+    const liveOutput = document.getElementById('liveOutput');
+
+    // Debounce function
+    function debounce(fn, delay) {
+      let timeout;
+      return (...args) => {
+        clearTimeout(timeout);
+        timeout = setTimeout(() => fn(...args), delay);
+      };
+    }
+
+    // Throttle function
+    function throttle(fn, limit) {
+      let lastCall = 0;
+      return (...args) => {
+        const now = new Date().getTime();
+        if (now - lastCall >= limit) {
+          lastCall = now;
+          fn(...args);
+        }
+      };
+    }
+
+    // Event handlers
+    function logDebounced(value) {
+      console.log("📦 Debounced:", value);
+    }
+
+    function logThrottled(value) {
+      console.log("⏱️ Throttled:", value);
+    }
+
+    const debouncedLog = debounce(logDebounced, 1000);
+    const throttledLog = throttle(logThrottled, 1000);
+
+    input.addEventListener('input', (e) => {
+      const value = e.target.value;
+      liveOutput.textContent = value;
+
+      debouncedLog(value);
+      throttledLog(value);
+    });
+  </script>
+
+</body>
+</html>
