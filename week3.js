@@ -79,17 +79,66 @@
 // safeFetch();
 
 
-for (var i = 0; i < 3; i++) {
-  setTimeout(() => console.log(i), 100);
+// global scope and block scope
+// for (var i = 0; i < 3; i++) {
+//   setTimeout(() => console.log(i), 100);
+// }
+
+// for (let i = 0; i < 3; i++) {
+//   setTimeout(() => console.log(i), 100);
+// }
+
+
+// for (var i = 0; i < 3; i++) {
+//   (function(j) {
+//     setTimeout(() => console.log(j), 100);
+//   })(i);
+// }
+
+
+// function declaration
+// function test(){
+//   console.log("Hello, Raunak");
+// }
+// test();
+
+// function expression
+// const greet = function(){
+//   console.log("Hello, Raunak")
+// }
+// greet();
+
+// arrow function 
+// const name = () => {
+//   console.log("Hello, Raunak");
+// }
+// name();
+
+
+
+// Practice set
+// sayHi();
+// sayHello();
+
+// function sayHi(){
+//   console.log("Hello, Raunak");
+// }
+
+// const sayHello = function(){
+//   console.log("Hello, Raunak");
+// }
+
+
+// closure
+function outer(){
+  const name = "Raunak";
+
+   function inner(){
+    console.log("Hello, " + name);
+  
+  }
+  return inner;
 }
 
-for (let i = 0; i < 3; i++) {
-  setTimeout(() => console.log(i), 100);
-}
-
-
-for (var i = 0; i < 3; i++) {
-  (function(j) {
-    setTimeout(() => console.log(j), 100);
-  })(i);
-}
+const greet = outer();
+greet();
