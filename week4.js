@@ -24,22 +24,24 @@
 // })
 
 
-const doubleClick = document.querySelector("#container");
+// const doubleClick = document.querySelector("#container");
 
-const heart = document.querySelector("i");
+// const heart = document.querySelector("i");
 
-doubleClick.addEventListener("dblclick", () => {
-    heart.style.transform = "translate(-50%, -50%) scale(1)";
-    heart.style.opacity = "1";
-    heart.style.color = "red";
-    heart.style.fontSize = "70px";
-    heart.style.position = "absolute";
-    heart.style.top = "50%";
-    heart.style.left = "50%";
-    heart.style.transform = "translate(-50%, -50%) scale(1)";
+// doubleClick.addEventListener("dblclick", () => {
+//     heart.style.transform = "translate(-50%, -50%) scale(1)";
+//     heart.style.opacity = "1";
+//     heart.style.color = "red";
+//     heart.style.fontSize = "70px";
+//     heart.style.position = "absolute";
+//     heart.style.top = "50%";
+//     heart.style.left = "50%";
+//     heart.style.transform = "translate(-50%, -50%) scale(1)";
     
-    setTimeout(() => {
-        heart.style.opacity = "0";
-        heart.style.transform = "translate(-50%, -50%) scale(0)";
-    }, 500);
-})
+//     setTimeout(() => {
+//         heart.style.opacity = "0";
+//         heart.style.transform = "translate(-50%, -50%) scale(0)";
+//     }, 500);
+// })
+
+
