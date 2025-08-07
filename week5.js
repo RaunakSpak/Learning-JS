@@ -174,4 +174,5 @@ Dog.prototype.bark = function () {
 // ES6 classes provide a clearer and more concise syntax for creating objects and
 // handling inheritance. They also support features like static methods and
 // class fields, making the code more readable and maintainable compared to
-// traditional constructor functions. Classes also enforce a more structured
+// traditional constructor functions. Classes also enforce a more structured approach to inheritance, allowing for better encapsulation and organization of code.
+// Additionally, ES6 classes use the `extends` keyword for inheritance, which is more intuitive
