@@ -1,0 +1,9 @@
+{
+  "name": "node-basic-cli",
+  "version": "1.0.0",
+  "bin": {
+    "hello": "./cli.js"
+  },
+  "type": "commonjs",
+  "license": "MIT"
+}
